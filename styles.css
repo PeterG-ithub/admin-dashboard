@@ -9,20 +9,80 @@
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 4fr;
   min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.header,
-.dashboard,
-.sidebar,
-.main-content,
-.projects {
-  border: 1px black solid
-}
 
 .header {
   grid-column: 2 / 4;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
+  padding: 10px 40px;
+}
+
+.header > * {
+  display: flex;
+  align-self: center;
+}
+
+.header img {
+  height: 25px;
+}
+
+.header input {
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: .8rem;
+  padding: .4rem;
+  margin: 0px 15px;
+  flex: 1;
+}
+
+.header > .right-profile {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header>.right-profile > *,
+.header>.left-profile > * {
+  align-self: center;
+}
+
+.header >.right-profile > .pfp {
+  height: 50px;
+  clip-path: circle();
+}
+
+.header > .left-profile > img {
+  height: 80px;
+  clip-path: circle();
+}
+
+.header > .left-profile { 
+  font-weight: bold;
+  font-size: 1rem;
+} 
+
+.header>.left-profile .name {
+  font-size: 1.8rem;
+}
+
+.header > .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header button {
+  background-color: #1992d4;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 1.3rem;
+  padding: 10px 30px;
 }
 
 .dashboard {
@@ -30,7 +90,6 @@
   background-color: #1992d4;
   color: white;
   font-size: 1.1rem;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding: 20px;
 }
@@ -86,4 +145,50 @@ a {
   display: grid;
   grid-template-columns: 2fr 1fr;
   background-color: #e2e8f0;
+}
+
+.projects {
+  padding: 20px;
+}
+
+.projects .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.items{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 20px;
+}
+
+.item {
+  position: relative;
+  background-color: white;
+  border-radius: 0.5rem;
+  border-left: 0.5rem solid #1992d4;
+  padding: 40px 35px;
+}
+
+.projects .header {
+  display: block;
+  padding: 0px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.projects .text {
+  opacity: 70%;
+}
+
+.projects .icons {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.projects  .icons >img {
+  height: 30px;
 }
